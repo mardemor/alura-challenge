@@ -6,5 +6,5 @@
 
 <p>HTML e CSS</p>
 
-<p><a href="">Resultado parcial</a></p>
+<p><a href="https://mardemor.github.io/alura-challenge/">Resultado parcial</a></p>
  
