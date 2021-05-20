@@ -1,0 +1,81 @@
+/* MAIN */
+
+.main-container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+/* CODE */
+
+.code-container {
+    border-radius: 8px;
+    background-color: #6BD1FF;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.code-subcontainer {
+    display: flex;
+    flex-direction: column;
+    background: #141414;    
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.code-button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 3.25rem;
+    margin-bottom: 1rem;
+}
+
+.code-button-group li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+
+.code-button-group li:nth-child(1) {
+    background-color: #FF5F56;
+}
+
+.code-button-group li:nth-child(2) {
+    background-color: #FFBD2E;
+}
+
+.code-button-group li:nth-child(3) {
+    background-color: #27C93F;
+}
+
+.code-content {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    height: 235px;
+    overflow-y: hidden;
+    resize: none;
+}
+
+/* HIGHLIGHT */
+
+.highlight-button {
+    background-color: #5081FB08;
+    margin-top: 1rem;
+    color: #FFFFFF;
+    transition: 300ms;
+} 
+
+.highlight-button:hover {
+    background-color: #5081FB16;
+}
+
+.highlight-button:active {
+    background-color: #5081FB24;
+}
