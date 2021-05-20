@@ -1,0 +1,48 @@
+/* MENU */
+
+.menu-container {
+    grid-area: menu;
+    margin-top: 3rem;
+}
+
+@media (max-width: 1023px) {
+
+    .menu-container {
+        display: none;
+    }
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF56;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    margin-right: 1rem;
+    background-color: #5081FB16;
+}
+
+.menu-item a:hover {
+    color: #FFFFFF;  
+}
+
+.menu-item a:hover svg {
+    fill: #FFFFFF;
+}
+
+.menu-item a:hover .menu-icon {
+    background-color: #5081FB;  
+}
+
+.menu-icon svg {
+    fill: #FFFFFF56;
+}
+
+
