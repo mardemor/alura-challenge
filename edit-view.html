@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alura Challenge</title>
+    <title>Alura Challenge - Edit</title>
 
     <link href="./icons/css/all.css" rel="stylesheet">
 
@@ -84,7 +84,7 @@
                 <h2 class="menu-title">menu</h2>
                 <ul class="menu-list">
                     <li class="menu-item">
-                        <a href="./edit-view.html">
+                        <a href="./edit-view.html" class="active">
                             <div class="icon-component ic-square menu-icon">
                                 <svg width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -114,14 +114,81 @@
         </aside>
 
         <!-- MAIN -->
-        <main class="main-container"></main>
+        <main class="main-container">
+
+            <!-- CODE -->
+            <section class="code-container">
+                <div class="code-component" id="codeComponent">
+                    <div class="code-subcontainer">
+                        <ul class="mac-buttons-component">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div id="codeWrapper">
+                            <code class="code-content hljs" id="codeContent" contenteditable="true">
+const pluckDeep = key => obj => 
+key.split('.').reduce((accum, key) =>
+    accum[key], obj)
+
+const compose = (...fns) => res => 
+fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+}
+return go(f, seed, [])
+}
+                        </code>
+                        </div>
+                    </div>
+                </div>
+                <button class="base-control highlight-button" id="highlightButton">Vizualizar com o highlight</button>
+            </section>
+
+            <!-- TOOLS -->
+            <section class="form-container">
+
+                <!-- PROJECT -->
+                <section class="form-card">
+                    <h2 class="form-card-title">seu projeto</h2>
+                    <div class="form-card-content">
+                        <input class="base-control base-input" id="projectTitle" type="text"
+                            placeholder="Nome do seu projeto">
+                        <textarea class="base-control base-textarea" id="projectDescription"
+                            placeholder="Descrição do seu projeto"></textarea>
+                    </div>
+                </section>
+
+                <!-- CUSTOMIZATION -->
+                <section class="form-card">
+                    <h2 class="form-card-title">personalização</h2>
+                    <div class="form-card-content resposive-customization-content">
+                        <select class="base-control base-select" id="languageSelect">
+                            <option value="javascript">JavaScript</option>
+                            <option value="css">CSS</option>
+                            <option value="html">HTML</option>
+                        </select>
+                        <input id="colorPicker" type="color" class="color-picker" value="#6BD1FF">
+                    </div>
+                </section>
+
+                <!-- SAVE -->
+                <button class="base-control save-button" id="saveButton">Salvar projeto</button>
+
+            </section>
+
+        </main>
 
     </section>
 
     <!-- SCRIPTS -->
     <script src="./highlight/highlight.pack.js"></script>
     <script src="./scripts/controller/menu-controller.js" type="module"></script>
-    <script src="./scripts/controller/index-controller.js" type="module"></script>
+    <script src="./scripts/controller/edit-controller.js" type="module"></script>
+    
 
 </body>
 

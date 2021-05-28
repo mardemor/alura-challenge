@@ -3,13 +3,34 @@
 .main-container {
     grid-area: main;
     display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
+    justify-content: space-between;
 }
 
-/* CODE */
+@media (max-width: 1023px) {
+    .main-container {
+        flex-direction: column;
+    }    
+}
+
+/* ------------------CODE CONTAINER-------------------- */
 
 .code-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 44rem;
+}
+
+@media (max-width: 1023px) {
+    .code-container {
+        margin-bottom: 3rem;
+        max-width: none;
+    }
+}
+
+/* CODE COMPONENT */
+
+.code-component {
     border-radius: 8px;
     background-color: #6BD1FF;
     padding: 2rem;
@@ -24,31 +45,7 @@
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
     border-radius: 8px;
     padding: 1rem;
-}
-
-.code-button-group {
-    display: flex;
-    justify-content: space-between;
-    width: 3.25rem;
-    margin-bottom: 1rem;
-}
-
-.code-button-group li {
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-}
-
-.code-button-group li:nth-child(1) {
-    background-color: #FF5F56;
-}
-
-.code-button-group li:nth-child(2) {
-    background-color: #FFBD2E;
-}
-
-.code-button-group li:nth-child(3) {
-    background-color: #27C93F;
+    box-sizing: border-box;
 }
 
 .code-content {
@@ -59,17 +56,20 @@
     color: inherit;
     border: none;
     height: 235px;
-    overflow-y: hidden;
-    resize: none;
 }
 
-/* HIGHLIGHT */
+.cc-small {
+    height: 150px;
+}
+
+/* HIGHLIGHT BUTTON */
 
 .highlight-button {
     background-color: #5081FB08;
     margin-top: 1rem;
     color: #FFFFFF;
-    transition: 300ms;
+    transition: 500ms;
+    cursor: pointer;
 } 
 
 .highlight-button:hover {
@@ -79,3 +79,83 @@
 .highlight-button:active {
     background-color: #5081FB24;
 }
+
+/* ----------------------FORM CONTAINER---------------------- */
+
+.form-container {
+    margin-left: 2rem;
+}
+
+@media (max-width: 1023px) {
+
+    .form-container {
+        margin-left: 0;
+    }
+
+}
+
+/* CUSTOMIZATION SECTION */
+
+.color-picker {
+    border-radius: 8px;
+    border: 1px solid #FFFFFF;
+    height: 3.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    background-color: #C4C4C401;
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+
+    .resposive-customization-content {
+        grid-auto-flow: column;
+        grid-auto-columns: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .resposive-customization-content {
+        grid-auto-flow: row;
+        grid-auto-columns: 100%;
+    }
+}
+
+/* SAVE BUTTON */
+
+.save-button {
+    background-color: #5081FB;
+    color: #051D3B;
+    border-radius: 8px;
+    border: none;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background-color: #7BA4FC;
+}
+
+
+.save-button:active {
+    background-color: #96B9FD;
+}
+
+/* ------------------PROJECTS CONTAINER---------------------- */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+

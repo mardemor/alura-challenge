@@ -1,8 +1,7 @@
 /* VARS */
 
 :root {
-    --start-width: 22vw;
-    --end-width: 22vw;
+    --start-column-width: 20vw;
 }
 
 /* BASE */
@@ -10,16 +9,19 @@
 .base-container {
     display: grid;
     grid-template-areas: 
-    "header header header"
-    "menu main tools";
+    "header header"
+    "menu main";
     grid-template-rows: 3.5rem auto;
-    grid-template-columns: var(--start-width) auto var(--end-width);
+    grid-template-columns: var(--start-column-width) auto;
+    row-gap: 2rem;
 
     font-family: 'Inter', sans-serif;
     background-color: #051D3B;
     color: white;
     border-radius: 40px;
-    width: 100vw;
+    width: 98vw;
+    min-width: 355px;
+    min-height: 100vh;
     padding: 2rem;
     box-sizing: border-box; 
 }
@@ -31,59 +33,4 @@
         flex-direction: column;
         height: auto;
     }
-}
-
-/* CARD */
-
-.card {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
-}
-
-.card-title {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-    margin-bottom: 1rem;
-}
-
-.card-content {
-    display: grid;
-    grid-auto-flow: row;
-    gap: 1rem;
-}
-
-/* CONTROLS */
-
-.base-control {
-    width: 100%;
-    height: 3.5rem;
-    border: none;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-}
-
-.base-input {
-    background-color: #FFFFFF16;
-    color: #FFFFFF84;
-    padding: 0 1rem;
-}
-
-.base-input:hover {
-    background-color: #FFFFFF24;
-}
-
-.base-textarea {
-    background-color: #FFFFFF16;
-    color: #FFFFFF84;
-    height: 5rem;
-    padding: 1rem 1rem;
-    resize: none;
-}
-
-.base-textarea:hover {
-    background-color: #FFFFFF24;
 }
