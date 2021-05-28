@@ -6,5 +6,9 @@
 
 <p>HTML e CSS</p>
 
+<h3>Semana 2</h3>
+
+<p>Javascript</p>
+
 <p><a href="https://mardemor.github.io/alura-challenge/">Resultado parcial</a></p>
  
