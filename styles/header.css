@@ -7,115 +7,67 @@ header {
     align-items: center;
 }
 
-/* LOGO */
+/* START CONTAINER > LOGO */
 
 .logo {
-    width: var(--start-width);
+    width: var(--start-column-width);
 }
 
-/* SEARCH FORM OR SEARCH ICON */
+/* SEARCH CONTAINER > SEARCH FORM OR SEARCH ICON */
 
-.mid-container {
+.search-container {
     display: flex;
     flex-grow: 1;
-}
-
-@media (max-width: 767px) {
-    .mid-container {
-        justify-content: flex-end;
-    }
+    margin-right: 1rem;
 }
 
 .search-form {
     flex-grow: 1;
+    max-width: 44rem;
+}
+
+.header-search-icon {
+    display: none;
 }
 
 @media (max-width: 767px) {
+    .search-container {
+        justify-content: flex-end;
+    }
     .search-form {
         display: none;
+        position: absolute;
+        top: 100px;
+        right: 25px;
+        width: 90vw;
+        border-radius: 8px;
     }
-}
-
-.search-icon {
-    display: none;
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
-}
-
-.search-icon:hover {
-    background-color: #FFFFFF08;
-}
-
-@media (max-width: 767px) {
-    .search-icon {
+    .search-form input {
+        background-color: #2D415B;
+    }
+    .search-form:hover input {
+        background-color: #2D415B;
+    }
+    .header-search-icon {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }    
-}
-
-.fa-seach {
-    font-size: 20px;
-}
-
-/* USER OR BARS */
-
-.end-container {
-    display: flex;
-    justify-content: flex-end;
-    width: var(--end-width);
-}
-
-@media (max-width: 1023px) {
-    .end-container {
-        width: 10vw;
     }
 }
 
-.user-component {
+/* USER COMPONENT OR MENU ICON */
+
+.header-user-component {
     display: flex;
-    align-items: center; 
-    height: 3.5rem;
-    border-radius: 8px;
-    padding: 0 1rem;
-    box-sizing: border-box;    
 }
 
-.user-component:hover {
-    background-color: #FFFFFF08;
+.header-menu-icon {
+    display: none;
 }
 
 @media (max-width: 1023px) {
-    .user-component {
+    .header-user-component {
         display: none;
     }
-}
-
-.user-photo {
-    margin-right: 10px;
-    border-radius: 100%;
-}
-
-.bars-icon {
-    display: none;
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
-}
-
-.bars-icon:hover {
-    background-color: #FFFFFF08;
-}
-
-@media (max-width: 1023px) {
-    .bars-icon {
+    .header-menu-icon {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }    
-}
-
-.fa-bars {
-    font-size: 20px;
+    } 
 }
