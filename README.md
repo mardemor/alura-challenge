@@ -12,5 +12,5 @@
 
 <p>Javascript: Adição das funcionalidades de formatação de código utilizando a api Highlight e persistência no storage do navegador.</p>
 
-<p>Veja <a href="https://mardemor.github.io/alura-challenge/">aqui</a> o resultado parcial./p>
+<p>Veja <a href="https://mardemor.github.io/alura-challenge/">aqui</a> o resultado parcial.</p>
  
