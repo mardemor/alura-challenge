@@ -19,6 +19,7 @@
         background-color: #2D415B;
         border-radius: 8px;
         box-sizing: border-box;
+        z-index: 1;
     }
 }
 

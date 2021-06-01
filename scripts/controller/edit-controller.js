@@ -5,8 +5,10 @@ export class EditController {
 
     constructor() {
 
-        const $ = document.querySelector.bind(document);
+        this.projectId = 0;
+        this.storage = new ProjectStorage();
 
+        const $ = document.querySelector.bind(document);
         this.colorInput = $('#colorPicker');
         this.languageSelect = $('#languageSelect');
         this.saveButton = $('#saveButton');
@@ -16,10 +18,11 @@ export class EditController {
         this.codeContent = $('#codeContent');
         this.codeWrapper = $('#codeWrapper');
         this.highlightButton = $('#highlightButton');
+        this.snapShotButton = $('#snapShotButton');
+        this.downloadButton = $('#downloadButton');
 
         this._setEventListeners();
-
-        this.storage = new ProjectStorage();
+        this._setProject();
     }
 
     /**
@@ -31,6 +34,27 @@ export class EditController {
         this.languageSelect.addEventListener('change', this.changeLanguage.bind(this));
         this.highlightButton.addEventListener('click', this.highlightCode.bind(this));
         this.saveButton.addEventListener('click', this.saveProject.bind(this));
+        this.snapShotButton.addEventListener('click', this.takeCodeSnapShot.bind(this));
+        this.downloadButton.addEventListener('click', this.downloadCode.bind(this));
+    }
+
+    /**
+     * Private method. Load project data from the url sent by comunity-controller.
+     */
+    _setProject() {
+
+        const url = new URL(window.location);
+        this.projectId = url.searchParams.get('id') || 0;
+
+        if (this.projectId > 0) {
+            const project = this.storage.getById(this.projectId);
+            this.projectTitle.value = project.title;
+            this.projectDescription.value = project.description;
+            this.languageSelect.value = project.language;
+            this.colorInput.value = project.color;
+            this.codeComponent.style['background-color'] = project.color;
+            this.codeContent.innerText = project.code;
+        }      
     }
 
     /**
@@ -75,12 +99,16 @@ export class EditController {
             this.languageSelect.value,
             this.colorInput.value
         );
-        console.log(project);
+        project.id = this.projectId;
 
-        this.storage.add(project);
+        if (project.id == 0) {
+            this.storage.add(project);
+        }
+        else {
+            this.storage.update(project);
+        }
+
         this._resetForm();
-
-        console.log(this.storage.list());
     }
 
     /**
@@ -95,6 +123,42 @@ export class EditController {
         this.codeComponent.style['background-color'] = '#6BD1FF';
         this.codeContent.innerText = '';
     }
+
+    /**
+     * Take a snapshot from code component, generate and download the 
+     * image as a png file.
+     */
+    takeCodeSnapShot() {
+        this.snapShotButton.style.visibility = 'hidden';
+        this.downloadButton.style.visibility = 'hidden';
+        window.scrollTo(0, 0);
+        html2canvas(this.codeComponent).then(
+            function (canvas) {
+                var imgageData = canvas.toDataURL("image/png");
+                var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                const linke = document.createElement('a');
+                linke.setAttribute('download', 'code.png');
+                linke.setAttribute('href', newData);
+                linke.click();            
+            }
+        );
+        this.snapShotButton.style.visibility = 'visible';
+        this.downloadButton.style.visibility = 'visible';
+    }
+
+    /**
+     * Generate and download a html, js or css file with the code content.
+     */
+    downloadCode() {
+        const extension = this.languageSelect.options[this.languageSelect.selectedIndex].dataset.extension;
+        const fileName = 'code.' + extension;
+        const encodedContent = encodeURIComponent(this.codeContent.innerText);
+        const linke = document.createElement('a');
+        linke.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodedContent);
+        linke.setAttribute('download', fileName);
+        linke.click();
+    }
 }
 
 const editController = new EditController();
+

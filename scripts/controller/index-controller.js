@@ -6,6 +6,8 @@ export class IndexController {
     constructor() {
         this.storage = new ProjectStorage();
         this.sampleList = this._createSampleList();
+        this._persistSampleList();
+        console.log(this.storage.list());
     }
 
     _createSampleList() {
@@ -18,7 +20,7 @@ export class IndexController {
             'Harry',
             `function teste() { alert('Hello!'); }`,
             'javascript',
-            'lightblue'
+            '#6BD1FF'
         );
 
         const p2 = new Project(
@@ -27,7 +29,7 @@ export class IndexController {
             'Harry',
             `.classe { color: #FF0000; }`,
             'css',
-            'salmon'
+            '#FF6B6B'
         );
 
         const p3 = new Project(
@@ -36,7 +38,7 @@ export class IndexController {
             'Harry',
             `<span class="bold">Hello !</span>`,
             'html',
-            'lightgreen'
+            '#6BFF90'
         );
 
         list.push(p1);
@@ -46,7 +48,7 @@ export class IndexController {
         return list;
     }
 
-    persistSampleList() {
+    _persistSampleList() {
 
         if (this.storage.isEmpty()) {
             this.sampleList.forEach(item => {
@@ -57,5 +59,3 @@ export class IndexController {
 }
 
 const indexController = new IndexController();
-indexController.persistSampleList();
-console.log(indexController.storage.list());
