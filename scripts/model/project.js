@@ -8,6 +8,7 @@ export class Project {
         language,
         color,
     ) {
+        this.id = 0;
         this.title = title;
         this.description = description;
         this.author = author;

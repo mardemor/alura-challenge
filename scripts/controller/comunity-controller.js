@@ -3,21 +3,23 @@ import { ProjectStorage } from '../storage/project-storage.js';
 export class ComunityController {
 
     constructor() {
-        this._projectsContainer = document.querySelector('#projectsContainer');
+        this.projectsContainer = document.querySelector('#projectsContainer');
         this._storage = new ProjectStorage();
         this._projects = this._storage.list();
+
+        this._showProjectsView();
     }
 
     /**
      * Public method, shows a project list from storage. 
      */
-    showProjectsView() {
+    _showProjectsView() {
 
         this._projects.forEach(project => {
 
             const template = this._getProjectTemplate(project);
             const element = this._createProjectCardElement(template, project);
-            this._projectsContainer.appendChild(element);
+            this.projectsContainer.appendChild(element);
         });
     }
 
@@ -30,11 +32,15 @@ export class ComunityController {
 <div class="project-snapshot">
     <div class="code-component" id="codeComponent" style="background-color: ${project.color}">
         <div class="code-subcontainer">
-            <ul class="mac-buttons-component">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <div class="code-subcontainer-header">
+                <ul class="mac-buttons-component" aria-hidden="true">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="code-buttons">
+                </div>
+            </div>
             <div id="codeWrapper">
             </div>
         </div>
@@ -70,8 +76,10 @@ export class ComunityController {
      */
     _createProjectCardElement(template, project) {
 
-        const element = document.createElement('div');
+        const element = document.createElement('a');
         element.classList.add('project-card');
+        element.setAttribute('href', './edit-view.html?id=' + project.id);
+        element.setAttribute('aria-label', 'Clique para editar ' + project.title)
         element.innerHTML = template;
         const codeWrapper = element.querySelector('#codeWrapper');
         codeWrapper.innerHTML = `<code class="code-content cc-small hljs ${project.language}" id="codeContent" contenteditable="false"></code>`;
@@ -83,4 +91,3 @@ export class ComunityController {
 }
 
 const comunityController = new ComunityController();
-comunityController.showProjectsView();

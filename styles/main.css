@@ -48,6 +48,32 @@
     box-sizing: border-box;
 }
 
+.code-subcontainer-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.code.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.code-button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.3rem;
+    margin-left: 0.8rem;
+    opacity: 20%;
+    cursor: pointer;
+    transition: 500ms;   
+}
+
+.code-button:hover {
+    opacity: 50%;
+}
+
 .code-content {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
@@ -68,7 +94,8 @@
     background-color: #5081FB08;
     margin-top: 1rem;
     color: #FFFFFF;
-    transition: 500ms;
+    border: 4px solid #051D3B;
+    transition: 300ms;
     cursor: pointer;
 } 
 
@@ -77,7 +104,8 @@
 }
 
 .highlight-button:active {
-    background-color: #5081FB24;
+    background-color: #5081FB16;
+    border: 4px solid #5081FB00;
 }
 
 /* ----------------------FORM CONTAINER---------------------- */
@@ -129,8 +157,8 @@
     background-color: #5081FB;
     color: #051D3B;
     border-radius: 8px;
-    border: none;
-    transition: 500ms;
+    border: 4px solid #051D3B;
+    transition: 300ms;
     cursor: pointer;
 }
 
@@ -141,6 +169,7 @@
 
 .save-button:active {
     background-color: #96B9FD;
+    border: 4px solid #5081FB00;
 }
 
 /* ------------------PROJECTS CONTAINER---------------------- */

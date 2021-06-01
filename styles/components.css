@@ -108,7 +108,6 @@
     margin-top: 2rem;
 }
 
-
 .project-card:hover .project-footer {
     display: flex;
 }
@@ -116,6 +115,10 @@
 .project-interaction {
     display: flex;
     align-items: center;
+}
+
+.liked {
+    background-color: #F65151;
 }
 
 .project-likes, .project-comments {
@@ -204,7 +207,6 @@
     display: flex;
     justify-content: space-between;
     width: 3.25rem;
-    margin-bottom: 1rem;
 }
 
 .mac-buttons-component li {
