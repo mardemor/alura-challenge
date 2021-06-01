@@ -15,11 +15,11 @@
 <p>Funcionalidades adicionais, documentação e publicação.</p>
 
 <h3>O projeto</h3>
-<p>Para este projeto optei por utilizar apenas HTML5, CSS3 e Javascript ES6. Portanto, não e necessário instalar nenhuma biblioteca adicional para o funcionamento.</p>
+<p>Para este projeto optei por utilizar apenas HTML5, CSS3 e Javascript ES6. Portanto, não e necessário instalar nenhuma biblioteca adicional para o funcionamento. Ao final será disponibilizado o link para download.</p>
 <p>É composto por três views, sendo:</p>
 <p>Index: Gera automaticamente uma lista de códigos de exemplo, que são armazenados no session storage do navegador.</p>
 <p>Edit: Fornece os controles para criação, edição e armazenamento dos códigos. Além de recursos de "highlighting" e geração de arquivos de imagens e código-fonte.</p>
 <p>Comunity: Exibe uma lista com os códigos armazenados, bem como a possibilidade de seleção para edição dos mesmos.</p>
 <p>As linguagens disponíveis são Javascript, CSS e HTML.</p>
 
-<p>Você pode testar <a href="https://mardemor.github.io/alura-challenge/">aqui</a> o projeto publicado.</p> 
+<p>Você pode testar <a href="https://mardemor.github.io/alura-challenge/">aqui</a> o projeto parcial publicado.</p> 
