@@ -16,7 +16,6 @@
 
 <h3>O projeto</h3>
 <p>Neste projeto optei por utilizar HTML5, CSS3 e Javascript ES6.</p>
-<p>Para a formatação de código-fonte utilizei <a href="https://highlightjs.org">highlight.js</a>.</p>
-<p>Para geração de arquivos de imagens utilizei <a href="https://html2canvas.hertzen.com">html2canvas</a>.</p>
+<p>Para a formatação de código-fonte utilizei <a href="https://highlightjs.org">highlight.js</a> e para geração de arquivos de imagens utilizei <a href="https://html2canvas.hertzen.com">html2canvas</a>.</p>
 <p>Para utilizar o projeto, basta fazer o <a href="https://github.com/mardemor/alura-challenge/archive/refs/tags/v1.0.zip">download</a> e executar em um sevidor web. Não é necessário instalar qualquer dependência externa.</p> 
-<p>A versão final pode ser visualizada <a href="https://mardemor.github.io/alura-challenge/">aqui</a>.</p> 
+<p>A versão final pode ser visualizada <a href="https://mardemor.github.io/alura-challenge/">aqui</a>.</p>
