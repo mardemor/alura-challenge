@@ -15,6 +15,6 @@
 <p>Funcionalidades adicionais, documentação e publicação.</p>
 
 <h3>O projeto</h3>
-<p>Neste projeto optei por utilizar HTML5, CSS3 e Javascript ES6. Utilizei também a biblioteca highlight.js.</p>
+<p>Neste projeto optei por utilizar HTML5, CSS3 e Javascript ES6. Utilizei também a biblioteca <a href="https://highlightjs.org">highlight.js</a>.</p>
 <p>Para utilizar o projeto, basta baixá-lo e executar em um sevidor web. Não é necessário instalar qualquer dependência externa.</p> 
 <p>A versão final pode ser visualizada <a href="https://mardemor.github.io/alura-challenge/">aqui</a>.</p> 
