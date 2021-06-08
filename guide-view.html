@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alura Challenge - Style Guide</title>
+
+    <link href="./icons/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/themes/dark.css">
+    <link rel="stylesheet" href="./styles/components/form-fields.css">
+    <link rel="stylesheet" href="./styles/components/buttons.css">
+    <link rel="stylesheet" href="./styles/components/code.css">
+    <link rel="stylesheet" href="./styles/components/project-card.css">
+    <link rel="stylesheet" href="./styles/shared/reset.css">
+    <link rel="stylesheet" href="./styles/shared/base.css">
+    <link rel="stylesheet" href="./styles/shared/header.css">
+    <link rel="stylesheet" href="./styles/shared/menu.css">
+    <link rel="stylesheet" href="./styles/shared/main.css">
+    <link rel="stylesheet" href="./styles/guide-view.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- BASE CONTAINER -->
+    <section class="base-container">
+
+        <!-- HEADER -->
+        <header>
+
+            <!-- LOGO -->
+            <h1 class="logo" aria-label="Logotipo Alura Dev">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="Logotipo Alura Dev" />
+                </a>
+            </h1>
+
+            <!-- SEARCH FORM OR SEARCH BUTTON -->
+            <div class="search-container">
+                <form class="search-form" id="searchForm">
+                    <input class="form-field input" type="text" placeholder="Busque por algo" role="search">
+                </form>
+                <div class="icon-button header-search-button" id="headerSearchButton">
+                    <i class="fas fa-search icon"></i>
+                </div>
+            </div>
+
+            <!-- USER BUTTON OR MENU BUTTON -->
+            <figure class="user-button ub-medium header-user-button">
+                <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
+                <figcaption class="user-name">Harry</figcaption>
+            </figure>
+            <div class="icon-button header-menu-button" id="headerMenuButton">
+                <i class="fas fa-bars icon"></i>
+            </div>
+
+        </header>
+
+        <!-- MENU -->
+        <aside class="menu-container" id="menuContainer">
+            <nav>
+                <h2 class="menu-title">menu</h2>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="./edit-view.html">
+                            <div class="menu-icon">
+                                <svg width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.71572 15.9832L6.80962 15.4301C6.60964 15.3739 6.49715 15.1645 6.55339 14.9645L10.8187 0.271913C10.8749 0.0719285 11.0843 -0.0405627 11.2843 0.0156829L13.1904 0.568765C13.3904 0.62501 13.5029 0.834369 13.4466 1.03435L9.18131 15.727C9.12194 15.9269 8.91571 16.0426 8.71572 15.9832ZM5.1535 12.4772L6.51277 11.0273C6.65651 10.8742 6.64714 10.6305 6.48777 10.4899L3.65675 7.99943L6.48777 5.509C6.64714 5.36839 6.65964 5.12466 6.51277 4.97155L5.1535 3.52166C5.01289 3.37167 4.77541 3.3623 4.62229 3.50604L0.119522 7.72446C-0.0398406 7.87132 -0.0398406 8.12442 0.119522 8.27129L4.62229 12.4928C4.77541 12.6366 5.01289 12.6303 5.1535 12.4772ZM15.3777 12.496L19.8805 8.27441C20.0398 8.12755 20.0398 7.87444 19.8805 7.72758L15.3777 3.50291C15.2277 3.3623 14.9902 3.36855 14.8465 3.51853L13.4872 4.96842C13.3435 5.12153 13.3529 5.36527 13.5122 5.50588L16.3433 7.99943L13.5122 10.4899C13.3529 10.6305 13.3404 10.8742 13.4872 11.0273L14.8465 12.4772C14.9871 12.6303 15.2246 12.6366 15.3777 12.496Z" />
+                                </svg>
+                            </div>
+                            Editor de código
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="./comunity-view.html">
+                            <div class="menu-icon">
+                                <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 6C4.10313 6 5 5.10313 5 4C5 2.89687 4.10313 2 3 2C1.89688 2 1 2.89687 1 4C1 5.10313 1.89688 6 3 6ZM17 6C18.1031 6 19 5.10313 19 4C19 2.89687 18.1031 2 17 2C15.8969 2 15 2.89687 15 4C15 5.10313 15.8969 6 17 6ZM18 7H16C15.45 7 14.9531 7.22188 14.5906 7.58125C15.85 8.27188 16.7437 9.51875 16.9375 11H19C19.5531 11 20 10.5531 20 10V9C20 7.89687 19.1031 7 18 7ZM10 7C11.9344 7 13.5 5.43437 13.5 3.5C13.5 1.56562 11.9344 0 10 0C8.06563 0 6.5 1.56562 6.5 3.5C6.5 5.43437 8.06563 7 10 7ZM12.4 8H12.1406C11.4906 8.3125 10.7688 8.5 10 8.5C9.23125 8.5 8.5125 8.3125 7.85938 8H7.6C5.6125 8 4 9.6125 4 11.6V12.5C4 13.3281 4.67188 14 5.5 14H14.5C15.3281 14 16 13.3281 16 12.5V11.6C16 9.6125 14.3875 8 12.4 8ZM5.40938 7.58125C5.04688 7.22188 4.55 7 4 7H2C0.896875 7 0 7.89687 0 9V10C0 10.5531 0.446875 11 1 11H3.05938C3.25625 9.51875 4.15 8.27188 5.40938 7.58125Z" />
+                                </svg>
+                            </div>
+                            Comunidade
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="./guide-view.html" class="active">
+                            <div class="menu-icon">
+                                S
+                            </div>
+                            Style Guide
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <figure class="user-button ub-medium menu-user-button">
+                <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
+                <figcaption class="user-name">Harry</figcaption>
+            </figure>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main-container">
+
+            <section class="guide-container">
+
+                <h3 class="project-title">Cores</h3>
+                <article class="guide-colors">
+                    <div class="guide-color-card">
+                        <div class="guide-color-content"></div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">hex</div>
+                            <div class="guide-color-value">#96B9FD</div>
+                        </div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">rgb</div>
+                            <div class="guide-color-value">150, 185, 253</div>
+                        </div>
+                    </div>
+                    <div class="guide-color-card">
+                        <div class="guide-color-content"></div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">hex</div>
+                            <div class="guide-color-value">#7BA4FC</div>
+                        </div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">rgb</div>
+                            <div class="guide-color-value">123, 164, 252</div>
+                        </div>
+                    </div>
+                    <div class="guide-color-card">
+                        <div class="guide-color-content"></div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">hex</div>
+                            <div class="guide-color-value">#5081FB</div>
+                        </div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">rgb</div>
+                            <div class="guide-color-value">080, 129, 251</div>
+                        </div>
+                    </div>
+                    <div class="guide-color-card">
+                        <div class="guide-color-content"></div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">hex</div>
+                            <div class="guide-color-value">#051D3B</div>
+                        </div>
+                        <div class="guide-color-description">
+                            <div class="guide-color-label">rgb</div>
+                            <div class="guide-color-value">005, 029, 059</div>
+                        </div>
+                    </div>
+                </article>
+
+                <h3 class="project-title">Tipografia</h3>
+                <article class="guide-typography">
+
+                    <div class="guide-typography-item">
+                        <div class="guide-typography-title">Title</div>
+                        <div class="guide-typography-values">
+                            <div>
+                                <i class="fas fa-text-height icon"></i>
+                                <span>21px</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-align-left icon"></i>
+                                <span>32px</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-typography-item">
+                        <div class="guide-typography-body">Body</div>
+                        <div class="guide-typography-values">
+                            <div>
+                                <i class="fas fa-text-height icon"></i>
+                                <span>16px</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-align-left icon"></i>
+                                <span>24px</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-typography-item">
+                        <div class="guide-typography-sidebar">sidebar title</div>
+                        <div class="guide-typography-values">
+                            <div>
+                                <i class="fas fa-text-height icon"></i>
+                                <span>12px</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-align-left icon"></i>
+                                <span>18px</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+                <h3 class="project-title">Sombras</h3>
+                <article class="guide-shadows">
+                    <div>
+                        <div>X = 0</div>
+                        <div>Y = 16</div>
+                    </div>
+                    <div>rgb(0,0,0,0.24)</div>
+                </article>
+
+                <h3 class="project-title">Form components</h3>
+                <article class="guide-form">
+
+                    <div></div>
+                    <div>Input de texto</div>
+                    <div>Select</div>
+
+                    <label>Normal</label>
+                    <input class="form-field input" type="text">
+                    <select class="form-field select"></select>
+
+                    <label>Hover</label>
+                    <input class="form-field input form-field-hover" type="text">
+                    <select class="form-field select form-field-hover"></select>
+
+                </article>
+
+                <h3 class="project-title">Botões</h3>
+                <article class="guide-buttons">
+
+                    <div></div>
+                    <div>Filled</div>
+                    <div>Outlined</div>
+                    <div>Icon button</div>
+                    <div>Item de menu</div>
+                    <div>Comentário</div>
+                    <div>Favorito</div>
+                    <div>Usuário</div>
+
+                    <span>Normal</span>
+                    <div><button class="base-button light-button">Button</button></div>
+                    <div><button class="base-button dark-button">Button</button></div>
+                    <div>
+                        <div class="icon-button">
+                            <i class="fas fa-bars icon"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="menu-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.7589 0H2.24107C1.01339 0 0 1.01339 0 2.24107V17.7589C0 18.9866 1.01339 20 2.24107 20H17.7589C18.9866 20 20 18.9866 20 17.7589V2.24107C20 1.01339 18.9866 0 17.7589 0ZM15.7321 12.692C15.7321 12.8795 15.5714 12.9598 15.3839 13.0402C14.6384 13.3616 13.8393 13.6518 12.9821 13.6518C11.7812 13.6518 11.2232 12.9063 9.78125 12.9063C8.74107 12.9063 7.64732 13.2812 6.76786 13.6786C6.71429 13.7054 6.66071 13.7054 6.60714 13.7321V15.7589C6.60714 15.8393 6.60714 15.9196 6.58036 15.9732V16.0268C6.47321 16.4018 6.125 16.6652 5.72768 16.6652C5.22321 16.6652 4.82143 16.2634 4.82143 15.7589V6C4.47321 5.73214 4.23661 5.30804 4.23661 4.82589C4.23661 4 4.90179 3.33036 5.73214 3.33036C6.55804 3.33036 7.22768 3.99554 7.22768 4.82589C7.22768 5.30804 7.01339 5.73214 6.64286 6V6.82589C6.72321 6.79911 6.80357 6.77232 6.88393 6.71875C7.70982 6.37054 8.69643 6.08036 9.62946 6.08036C10.6429 6.08036 11.442 6.34821 12.3482 6.69196C12.5357 6.77232 12.7232 6.79911 12.933 6.79911C13.9464 6.79911 15.067 6.08036 15.3348 6.08036C15.5491 6.08036 15.7366 6.24107 15.7366 6.42857V12.692H15.7321Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="action-button">
+                            <i class="fas fa-comment icon"></i>
+                            <div class="project-comments">9</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="action-button">
+                            <i class="fas fa-heart icon"></i>
+                            <div class="project-likes">9</div>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="user-button ub-medium">
+                            <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
+                            <figcaption class="user-name">Harry</figcaption>
+                        </figure>
+                    </div>
+
+                    <span>Hover</span>
+                    <div><button class="base-button light-button light-button-hover">Button</button></div>
+                    <div><button class="base-button dark-button dark-button-hover">Button</button></div>
+                    <div>
+                        <div class="icon-button icon-button-hover">
+                            <i class="fas fa-bars icon"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="menu-icon menu-icon-hover">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.7589 0H2.24107C1.01339 0 0 1.01339 0 2.24107V17.7589C0 18.9866 1.01339 20 2.24107 20H17.7589C18.9866 20 20 18.9866 20 17.7589V2.24107C20 1.01339 18.9866 0 17.7589 0ZM15.7321 12.692C15.7321 12.8795 15.5714 12.9598 15.3839 13.0402C14.6384 13.3616 13.8393 13.6518 12.9821 13.6518C11.7812 13.6518 11.2232 12.9063 9.78125 12.9063C8.74107 12.9063 7.64732 13.2812 6.76786 13.6786C6.71429 13.7054 6.66071 13.7054 6.60714 13.7321V15.7589C6.60714 15.8393 6.60714 15.9196 6.58036 15.9732V16.0268C6.47321 16.4018 6.125 16.6652 5.72768 16.6652C5.22321 16.6652 4.82143 16.2634 4.82143 15.7589V6C4.47321 5.73214 4.23661 5.30804 4.23661 4.82589C4.23661 4 4.90179 3.33036 5.73214 3.33036C6.55804 3.33036 7.22768 3.99554 7.22768 4.82589C7.22768 5.30804 7.01339 5.73214 6.64286 6V6.82589C6.72321 6.79911 6.80357 6.77232 6.88393 6.71875C7.70982 6.37054 8.69643 6.08036 9.62946 6.08036C10.6429 6.08036 11.442 6.34821 12.3482 6.69196C12.5357 6.77232 12.7232 6.79911 12.933 6.79911C13.9464 6.79911 15.067 6.08036 15.3348 6.08036C15.5491 6.08036 15.7366 6.24107 15.7366 6.42857V12.692H15.7321Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="action-button action-button-hover">
+                            <i class="fas fa-comment icon"></i>
+                            <div class="project-comments">9</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="action-button action-button-hover">
+                            <i class="fas fa-heart icon"></i>
+                            <div class="project-likes">9</div>
+                        </div>
+                    </div>
+                    <div>
+                        <figure class="user-button ub-medium user-button-hover">
+                            <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
+                            <figcaption class="user-name">Harry</figcaption>
+                        </figure>
+                    </div>
+
+                    <span>Pressed</span>
+                    <div><button class="base-button light-button light-button-active">Button</button></div>
+                    <div><button class="base-button dark-button dark-button-active">Button</button></div>
+                    <div>
+                        <div class="icon-button icon-button-active">
+                            <i class="fas fa-bars icon"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="menu-icon menu-icon-active">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.7589 0H2.24107C1.01339 0 0 1.01339 0 2.24107V17.7589C0 18.9866 1.01339 20 2.24107 20H17.7589C18.9866 20 20 18.9866 20 17.7589V2.24107C20 1.01339 18.9866 0 17.7589 0ZM15.7321 12.692C15.7321 12.8795 15.5714 12.9598 15.3839 13.0402C14.6384 13.3616 13.8393 13.6518 12.9821 13.6518C11.7812 13.6518 11.2232 12.9063 9.78125 12.9063C8.74107 12.9063 7.64732 13.2812 6.76786 13.6786C6.71429 13.7054 6.66071 13.7054 6.60714 13.7321V15.7589C6.60714 15.8393 6.60714 15.9196 6.58036 15.9732V16.0268C6.47321 16.4018 6.125 16.6652 5.72768 16.6652C5.22321 16.6652 4.82143 16.2634 4.82143 15.7589V6C4.47321 5.73214 4.23661 5.30804 4.23661 4.82589C4.23661 4 4.90179 3.33036 5.73214 3.33036C6.55804 3.33036 7.22768 3.99554 7.22768 4.82589C7.22768 5.30804 7.01339 5.73214 6.64286 6V6.82589C6.72321 6.79911 6.80357 6.77232 6.88393 6.71875C7.70982 6.37054 8.69643 6.08036 9.62946 6.08036C10.6429 6.08036 11.442 6.34821 12.3482 6.69196C12.5357 6.77232 12.7232 6.79911 12.933 6.79911C13.9464 6.79911 15.067 6.08036 15.3348 6.08036C15.5491 6.08036 15.7366 6.24107 15.7366 6.42857V12.692H15.7321Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="action-button action-button-active">
+                            <i class="fas fa-comment icon"></i>
+                            <div class="project-comments">9</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="action-button action-button-active">
+                            <i class="fas fa-heart icon"></i>
+                            <div class="project-likes">9</div>
+                        </div>
+                    </div>
+                    <div></div>
+
+                    <span>Focus</span>
+                    <div><button class="base-button light-button light-button-focus">Button</button></div>
+                    <div><button class="base-button dark-button dark-button-focus">Button</button></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <span>Active</span>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <div class="action-button action-button-liked">
+                            <i class="fas fa-heart icon"></i>
+                            <div class="project-likes">9</div>
+                        </div>
+                    </div>
+                    <div></div>
+
+                </article>
+
+                <h3 class="project-title">Card de projeto</h3>
+                <article class="guide-project">
+
+                    <div>Normal</div>
+                    <div class="project-card">
+                        <div class="project-snapshot">
+                            <div class="code-component" id="codeComponent">
+                                <div class="code-subcontainer">
+                                    <div class="code-subcontainer-header">
+                                        <ul class="mac-buttons-component" aria-hidden="true">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="code-buttons">
+                                        </div>
+                                    </div>
+                                    <div id="codeWrapper">
+                                        <code class="code-content cc-small hljs javascript guide-project-code"
+                                            id="codeContent" contenteditable="false">
+                                                alert('Alura Challenge');                                                    
+                                        </code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Título do projeto</h3>
+                            <p class="project-description">Esta é a descrição do meu projeto.</p>
+                        </div>
+                    </div>
+
+                    <div>Hover</div>
+                    <div class="project-card">
+                        <div class="project-snapshot">
+                            <div class="code-component" id="codeComponent">
+                                <div class="code-subcontainer">
+                                    <div class="code-subcontainer-header">
+                                        <ul class="mac-buttons-component" aria-hidden="true">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <div class="code-buttons">
+                                        </div>
+                                    </div>
+                                    <div id="codeWrapper">
+                                        <code class="code-content cc-small hljs javascript" id="codeContent"
+                                            contenteditable="true">
+                                                    alert('Alura Challenge');                                                 
+                                        </code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Título do projeto</h3>
+                            <p class="project-description">Esta é a descrição do meu projeto.</p>
+                            <div class="project-footer project-footer-guide">
+                                <div class="project-interaction">
+                                    <div class="action-button">
+                                        <i class="fas fa-heart icon"></i>
+                                        <div class="project-likes">9</div>
+                                    </div>
+                                    <div class="action-button">
+                                        <i class="fas fa-comment icon"></i>
+                                        <div class="project-comments">9</div>
+                                    </div>
+                                </div>
+                                <figure class="user-button ub-small">
+                                    <img class="user-photo up-small" src="./images/photo-profile.jpg" alt="">
+                                    <figcaption class="user-name">@Harry</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+                <h3 class="project-title">Menu para tablets</h3>
+                <article class="guide-menu">
+                    <div class="guide-menu-header">
+                        <img src="./images/logo.png" alt="Logotipo Alura Dev" />
+                        <form class="search-form">
+                            <input class="form-field input" type="text" placeholder="Busque por algo">
+                        </form>
+                        <div class="icon-button">
+                            <i class="fas fa-times icon"></i>
+                        </div>
+                    </div>
+                    <div class="menu-container">
+                        <nav>
+                            <h2 class="menu-title">menu</h2>
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <a>
+                                        <div class="menu-icon">
+                                            <svg width="20" height="16" viewBox="0 0 20 16"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.71572 15.9832L6.80962 15.4301C6.60964 15.3739 6.49715 15.1645 6.55339 14.9645L10.8187 0.271913C10.8749 0.0719285 11.0843 -0.0405627 11.2843 0.0156829L13.1904 0.568765C13.3904 0.62501 13.5029 0.834369 13.4466 1.03435L9.18131 15.727C9.12194 15.9269 8.91571 16.0426 8.71572 15.9832ZM5.1535 12.4772L6.51277 11.0273C6.65651 10.8742 6.64714 10.6305 6.48777 10.4899L3.65675 7.99943L6.48777 5.509C6.64714 5.36839 6.65964 5.12466 6.51277 4.97155L5.1535 3.52166C5.01289 3.37167 4.77541 3.3623 4.62229 3.50604L0.119522 7.72446C-0.0398406 7.87132 -0.0398406 8.12442 0.119522 8.27129L4.62229 12.4928C4.77541 12.6366 5.01289 12.6303 5.1535 12.4772ZM15.3777 12.496L19.8805 8.27441C20.0398 8.12755 20.0398 7.87444 19.8805 7.72758L15.3777 3.50291C15.2277 3.3623 14.9902 3.36855 14.8465 3.51853L13.4872 4.96842C13.3435 5.12153 13.3529 5.36527 13.5122 5.50588L16.3433 7.99943L13.5122 10.4899C13.3529 10.6305 13.3404 10.8742 13.4872 11.0273L14.8465 12.4772C14.9871 12.6303 15.2246 12.6366 15.3777 12.496Z" />
+                                            </svg>
+                                        </div>
+                                        Editor de código
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a>
+                                        <div class="menu-icon">
+                                            <svg width="20" height="14" viewBox="0 0 20 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3 6C4.10313 6 5 5.10313 5 4C5 2.89687 4.10313 2 3 2C1.89688 2 1 2.89687 1 4C1 5.10313 1.89688 6 3 6ZM17 6C18.1031 6 19 5.10313 19 4C19 2.89687 18.1031 2 17 2C15.8969 2 15 2.89687 15 4C15 5.10313 15.8969 6 17 6ZM18 7H16C15.45 7 14.9531 7.22188 14.5906 7.58125C15.85 8.27188 16.7437 9.51875 16.9375 11H19C19.5531 11 20 10.5531 20 10V9C20 7.89687 19.1031 7 18 7ZM10 7C11.9344 7 13.5 5.43437 13.5 3.5C13.5 1.56562 11.9344 0 10 0C8.06563 0 6.5 1.56562 6.5 3.5C6.5 5.43437 8.06563 7 10 7ZM12.4 8H12.1406C11.4906 8.3125 10.7688 8.5 10 8.5C9.23125 8.5 8.5125 8.3125 7.85938 8H7.6C5.6125 8 4 9.6125 4 11.6V12.5C4 13.3281 4.67188 14 5.5 14H14.5C15.3281 14 16 13.3281 16 12.5V11.6C16 9.6125 14.3875 8 12.4 8ZM5.40938 7.58125C5.04688 7.22188 4.55 7 4 7H2C0.896875 7 0 7.89687 0 9V10C0 10.5531 0.446875 11 1 11H3.05938C3.25625 9.51875 4.15 8.27188 5.40938 7.58125Z" />
+                                            </svg>
+                                        </div>
+                                        Comunidade
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <figure class="user-button ub-medium">
+                            <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
+                            <figcaption class="user-name">Harry</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <h3 class="project-title">Menu para smartphones</h3>
+                <article class="guide-menu">
+                    <div class="guide-menu-header">
+                        <img src="./images/logo.png" alt="Logotipo Alura Dev" />
+                        <div class="icon-button">
+                            <i class="fas fa-search icon"></i>
+                        </div>
+                        <div class="icon-button">
+                            <i class="fas fa-times icon"></i>
+                        </div>
+                    </div>
+                    <div class="menu-container">
+                        <nav>
+                            <h2 class="menu-title">menu</h2>
+                            <ul class="menu-list">
+                                <li class="menu-item">
+                                    <a>
+                                        <div class="menu-icon">
+                                            <svg width="20" height="16" viewBox="0 0 20 16"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.71572 15.9832L6.80962 15.4301C6.60964 15.3739 6.49715 15.1645 6.55339 14.9645L10.8187 0.271913C10.8749 0.0719285 11.0843 -0.0405627 11.2843 0.0156829L13.1904 0.568765C13.3904 0.62501 13.5029 0.834369 13.4466 1.03435L9.18131 15.727C9.12194 15.9269 8.91571 16.0426 8.71572 15.9832ZM5.1535 12.4772L6.51277 11.0273C6.65651 10.8742 6.64714 10.6305 6.48777 10.4899L3.65675 7.99943L6.48777 5.509C6.64714 5.36839 6.65964 5.12466 6.51277 4.97155L5.1535 3.52166C5.01289 3.37167 4.77541 3.3623 4.62229 3.50604L0.119522 7.72446C-0.0398406 7.87132 -0.0398406 8.12442 0.119522 8.27129L4.62229 12.4928C4.77541 12.6366 5.01289 12.6303 5.1535 12.4772ZM15.3777 12.496L19.8805 8.27441C20.0398 8.12755 20.0398 7.87444 19.8805 7.72758L15.3777 3.50291C15.2277 3.3623 14.9902 3.36855 14.8465 3.51853L13.4872 4.96842C13.3435 5.12153 13.3529 5.36527 13.5122 5.50588L16.3433 7.99943L13.5122 10.4899C13.3529 10.6305 13.3404 10.8742 13.4872 11.0273L14.8465 12.4772C14.9871 12.6303 15.2246 12.6366 15.3777 12.496Z" />
+                                            </svg>
+                                        </div>
+                                        Editor de código
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a>
+                                        <div class="menu-icon">
+                                            <svg width="20" height="14" viewBox="0 0 20 14"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3 6C4.10313 6 5 5.10313 5 4C5 2.89687 4.10313 2 3 2C1.89688 2 1 2.89687 1 4C1 5.10313 1.89688 6 3 6ZM17 6C18.1031 6 19 5.10313 19 4C19 2.89687 18.1031 2 17 2C15.8969 2 15 2.89687 15 4C15 5.10313 15.8969 6 17 6ZM18 7H16C15.45 7 14.9531 7.22188 14.5906 7.58125C15.85 8.27188 16.7437 9.51875 16.9375 11H19C19.5531 11 20 10.5531 20 10V9C20 7.89687 19.1031 7 18 7ZM10 7C11.9344 7 13.5 5.43437 13.5 3.5C13.5 1.56562 11.9344 0 10 0C8.06563 0 6.5 1.56562 6.5 3.5C6.5 5.43437 8.06563 7 10 7ZM12.4 8H12.1406C11.4906 8.3125 10.7688 8.5 10 8.5C9.23125 8.5 8.5125 8.3125 7.85938 8H7.6C5.6125 8 4 9.6125 4 11.6V12.5C4 13.3281 4.67188 14 5.5 14H14.5C15.3281 14 16 13.3281 16 12.5V11.6C16 9.6125 14.3875 8 12.4 8ZM5.40938 7.58125C5.04688 7.22188 4.55 7 4 7H2C0.896875 7 0 7.89687 0 9V10C0 10.5531 0.446875 11 1 11H3.05938C3.25625 9.51875 4.15 8.27188 5.40938 7.58125Z" />
+                                            </svg>
+                                        </div>
+                                        Comunidade
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <figure class="user-button ub-medium">
+                            <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
+                            <figcaption class="user-name">Harry</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+            </section>
+            
+        </main>
+
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="./highlight/highlight.pack.js"></script>
+    <script src="./scripts/controller/menu-controller.js" type="module"></script>
+    <script src="./scripts/controller/guide-controller.js" type="module"></script>
+
+</body>
+
+</html>

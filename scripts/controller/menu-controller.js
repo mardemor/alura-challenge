@@ -4,9 +4,9 @@ export class MenuController {
 
         const $ = document.querySelector.bind(document);
 
-        this.menuIcon = $('#headerMenuIcon');
+        this.menuButton = $('#headerMenuButton');
         this.menuContainer = $('#menuContainer');
-        this.searchIcon = $('#headerSearchIcon');        
+        this.searchButton = $('#headerSearchButton');        
         this.searchForm = $('#searchForm');
 
         this._setEventListeners();
@@ -17,8 +17,8 @@ export class MenuController {
      */
     _setEventListeners() {
 
-        this.menuIcon.addEventListener('click', this.toggleMenu.bind(this));
-        this.searchIcon.addEventListener('click', this.toggleSearch.bind(this));        
+        this.menuButton.addEventListener('click', this.toggleMenu.bind(this));
+        this.searchButton.addEventListener('click', this.toggleSearch.bind(this));        
     }
 
     /**
@@ -27,9 +27,9 @@ export class MenuController {
     toggleMenu() {
 
         if (this.menuContainer.classList.contains('show'))
-            this.menuIcon.innerHTML = '<i class="fas fa-bars icon"></i>';
+            this.menuButton.innerHTML = '<i class="fas fa-bars icon"></i>';
         else 
-            this.menuIcon.innerHTML = '<i class="fas fa-times icon"></i>';
+            this.menuButton.innerHTML = '<i class="fas fa-times icon"></i>';
 
         this.menuContainer.classList.toggle('show');
     }
@@ -39,9 +39,9 @@ export class MenuController {
      */
     toggleSearch() {
         if (this.searchForm.classList.contains('show'))
-            this.searchIcon.innerHTML = '<i class="fas fa-search icon"></i>';
+            this.searchButton.innerHTML = '<i class="fas fa-search icon"></i>';
         else 
-            this.searchIcon.innerHTML = '<i class="fas fa-times icon"></i>';
+            this.searchButton.innerHTML = '<i class="fas fa-times icon"></i>';
 
         this.searchForm.classList.toggle('show');
     }

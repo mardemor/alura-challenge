@@ -1,0 +1,20 @@
+/* FORM CARD COMPONENT */
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.form-card-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.form-card-content {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+}

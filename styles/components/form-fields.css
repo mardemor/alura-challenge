@@ -1,0 +1,50 @@
+/* FORM FIELDS */
+
+.form-field {
+    width: 100%;
+    background-color: var(--form-field-bgcolor);
+    color: var(--form-field-color);
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: 500ms;
+}
+
+.form-field:hover {
+    background-color: var(--form-field-bgcolor-hover);
+}
+
+.input {
+    height: 3.5rem;
+    padding: 0 1rem;
+    
+}
+
+.select {
+    height: 3.5rem;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.select option {
+    background-color: var(--base-bgcolor);
+}
+
+.textarea {    
+    height: 5rem;
+    padding: 1rem 1rem;
+    resize: none;
+}
+
+.color-picker {
+    border-radius: 0.5rem;
+    border: 1px solid #FFFFFF;
+    height: 3.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    background-color: #C4C4C401;
+    cursor: pointer;
+}

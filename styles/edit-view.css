@@ -1,0 +1,46 @@
+/* CODE CONTAINER */
+
+.code-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 44rem;
+}
+
+@media (max-width: 1023px) {
+    .code-container {
+        margin-bottom: 3rem;
+        max-width: none;
+    }
+}
+
+
+/* FORM CONTAINER */
+
+.form-container {
+    margin-left: 2rem;
+}
+
+@media (max-width: 1023px) {
+
+    .form-container {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 1023px) {
+
+    .resposive-customization-content {
+        grid-auto-flow: column;
+        grid-auto-columns: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .resposive-customization-content {
+        grid-auto-flow: row;
+        grid-auto-columns: 100%;
+    }
+}
