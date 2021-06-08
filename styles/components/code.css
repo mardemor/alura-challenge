@@ -1,0 +1,82 @@
+/* CODE COMPONENT */
+
+.code-component {
+    border-radius: 8px;
+    background-color: var(--code-frame-bgcolor);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.code-subcontainer {
+    display: flex;
+    flex-direction: column;
+    background: var(--code-content-bgcolor);    
+    box-shadow: 0px 16px 24px var(--code-frame-shadow);
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 17rem;
+}
+
+.code-subcontainer-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.code.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.code-wrapper {
+    height: 100%;
+}
+
+.code-content {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: var(--code-content-bgcolor);
+    color: var(--code-content-color);
+    border: none;
+    height: 235px;
+}
+
+.cc-small {
+    height: 150px;
+}
+
+/* MAC BUTTONS INNER COMPONENT */
+
+.mac-buttons-component {
+    display: flex;
+    justify-content: space-between;
+    width: 3.25rem;
+}
+
+.mac-buttons-component li {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+}
+
+.mac-buttons-component li:nth-child(1) {
+    background-color: var(--mac-button-red);
+}
+
+.mac-buttons-component li:nth-child(2) {
+    background-color: var(--mac-button-yellow);
+}
+
+.mac-buttons-component li:nth-child(3) {
+    background-color: var(--mac-button-green);
+}
+
+/* CODE HIGHLIGHT BUTTON */
+
+.code-highlight-button {
+    margin-top: 1rem;
+}

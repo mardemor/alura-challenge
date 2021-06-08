@@ -11,13 +11,18 @@
 
     <link href="./icons/css/all.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/components.css">
-    <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/menu.css">
     <link rel="stylesheet" href="./highlight/styles/darcula.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/themes/dark.css">
+    <link rel="stylesheet" href="./styles/components/form-fields.css">
+    <link rel="stylesheet" href="./styles/components/buttons.css">
+    <link rel="stylesheet" href="./styles/components/code.css">
+    <link rel="stylesheet" href="./styles/components/project-card.css">
+    <link rel="stylesheet" href="./styles/shared/reset.css">
+    <link rel="stylesheet" href="./styles/shared/base.css">
+    <link rel="stylesheet" href="./styles/shared/header.css">
+    <link rel="stylesheet" href="./styles/shared/menu.css">
+    <link rel="stylesheet" href="./styles/shared/main.css">
+    <link rel="stylesheet" href="./styles/comunity-view.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
@@ -43,19 +48,19 @@
             <!-- SEARCH FORM OR SEARCH ICON -->
             <div class="search-container">
                 <form class="search-form" id="searchForm">
-                    <input class="base-control base-input" type="text" placeholder="Busque por algo" role="search">
+                    <input class="form-field input" type="text" placeholder="Busque por algo" role="search">
                 </form>
-                <div class="icon-component ic-square header-search-icon" id="headerSearchIcon">
+                <div class="icon-button header-search-button" id="headerSearchButton">
                     <i class="fas fa-search icon"></i>
                 </div>
             </div>
 
-            <!-- USER COMPONENT OR MENU ICON -->
-            <figure class="user-component uc-medium header-user-component">
-                <img class="user-photo uf-medium" src="./images/photo-profile.jpg" alt="">
+            <!-- USER BUTTON OR MENU BUTTON -->
+            <figure class="user-button ub-medium header-user-button">
+                <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
                 <figcaption class="user-name">Harry</figcaption>
             </figure>
-            <div class="icon-component ic-square header-menu-icon" id="headerMenuIcon">
+            <div class="icon-button header-menu-button" id="headerMenuButton">
                 <i class="fas fa-bars icon"></i>
             </div>
 
@@ -68,7 +73,7 @@
                 <ul class="menu-list">
                     <li class="menu-item">
                         <a href="./edit-view.html">
-                            <div class="icon-component ic-square menu-icon">
+                            <div class="menu-icon">
                                 <svg width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M8.71572 15.9832L6.80962 15.4301C6.60964 15.3739 6.49715 15.1645 6.55339 14.9645L10.8187 0.271913C10.8749 0.0719285 11.0843 -0.0405627 11.2843 0.0156829L13.1904 0.568765C13.3904 0.62501 13.5029 0.834369 13.4466 1.03435L9.18131 15.727C9.12194 15.9269 8.91571 16.0426 8.71572 15.9832ZM5.1535 12.4772L6.51277 11.0273C6.65651 10.8742 6.64714 10.6305 6.48777 10.4899L3.65675 7.99943L6.48777 5.509C6.64714 5.36839 6.65964 5.12466 6.51277 4.97155L5.1535 3.52166C5.01289 3.37167 4.77541 3.3623 4.62229 3.50604L0.119522 7.72446C-0.0398406 7.87132 -0.0398406 8.12442 0.119522 8.27129L4.62229 12.4928C4.77541 12.6366 5.01289 12.6303 5.1535 12.4772ZM15.3777 12.496L19.8805 8.27441C20.0398 8.12755 20.0398 7.87444 19.8805 7.72758L15.3777 3.50291C15.2277 3.3623 14.9902 3.36855 14.8465 3.51853L13.4872 4.96842C13.3435 5.12153 13.3529 5.36527 13.5122 5.50588L16.3433 7.99943L13.5122 10.4899C13.3529 10.6305 13.3404 10.8742 13.4872 11.0273L14.8465 12.4772C14.9871 12.6303 15.2246 12.6366 15.3777 12.496Z" />
@@ -79,7 +84,7 @@
                     </li>
                     <li class="menu-item">
                         <a href="./comunity-view.html" class="active">
-                            <div class="icon-component ic-square menu-icon">
+                            <div class="menu-icon">
                                 <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M3 6C4.10313 6 5 5.10313 5 4C5 2.89687 4.10313 2 3 2C1.89688 2 1 2.89687 1 4C1 5.10313 1.89688 6 3 6ZM17 6C18.1031 6 19 5.10313 19 4C19 2.89687 18.1031 2 17 2C15.8969 2 15 2.89687 15 4C15 5.10313 15.8969 6 17 6ZM18 7H16C15.45 7 14.9531 7.22188 14.5906 7.58125C15.85 8.27188 16.7437 9.51875 16.9375 11H19C19.5531 11 20 10.5531 20 10V9C20 7.89687 19.1031 7 18 7ZM10 7C11.9344 7 13.5 5.43437 13.5 3.5C13.5 1.56562 11.9344 0 10 0C8.06563 0 6.5 1.56562 6.5 3.5C6.5 5.43437 8.06563 7 10 7ZM12.4 8H12.1406C11.4906 8.3125 10.7688 8.5 10 8.5C9.23125 8.5 8.5125 8.3125 7.85938 8H7.6C5.6125 8 4 9.6125 4 11.6V12.5C4 13.3281 4.67188 14 5.5 14H14.5C15.3281 14 16 13.3281 16 12.5V11.6C16 9.6125 14.3875 8 12.4 8ZM5.40938 7.58125C5.04688 7.22188 4.55 7 4 7H2C0.896875 7 0 7.89687 0 9V10C0 10.5531 0.446875 11 1 11H3.05938C3.25625 9.51875 4.15 8.27188 5.40938 7.58125Z" />
@@ -88,10 +93,18 @@
                             Comunidade
                         </a>
                     </li>
+                    <li class="menu-item">
+                        <a href="./guide-view.html">
+                            <div class="menu-icon">
+                                S
+                            </div>
+                            Style Guide
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <figure class="user-component uc-medium menu-user-component">
-                <img class="user-photo uf-medium" src="./images/photo-profile.jpg" alt="">
+            <figure class="user-button ub-medium menu-user-button">
+                <img class="user-photo up-medium" src="./images/photo-profile.jpg" alt="">
                 <figcaption class="user-name">Harry</figcaption>
             </figure>
         </aside>

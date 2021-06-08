@@ -4,6 +4,7 @@
     --start-column-width: 20vw;
 }
 
+
 /* BASE */
 
 .base-container {
@@ -16,10 +17,10 @@
     row-gap: 2rem;
 
     font-family: 'Inter', sans-serif;
-    background-color: #051D3B;
-    color: white;
+    background-color: var(--base-bgcolor);
+    color: var(--base-color);
     border-radius: 40px;
-    width: 98vw;
+    width: 99vw;
     min-width: 355px;
     min-height: 100vh;
     padding: 2rem;
@@ -33,4 +34,13 @@
         flex-direction: column;
         height: auto;
     }
+}
+
+/* HIDING COMPONENTS */
+.show {
+    display: flex !important;
+}
+
+.hidden {
+    display: none !important;
 }

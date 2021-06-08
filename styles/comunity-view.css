@@ -1,0 +1,15 @@
+/* PROJECTS CONTAINER */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

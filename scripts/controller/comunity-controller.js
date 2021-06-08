@@ -51,18 +51,18 @@ export class ComunityController {
     <p class="project-description">${project.description}</p>
     <div class="project-footer">
         <div class="project-interaction">
-            <div class="icon-component ic-rect">
+            <div class="action-button">
                 <i class="fas fa-heart icon"></i>
                 <div class="project-likes">${project.likes}</div>
             </div>
-            <div class="icon-component ic-rect">
+            <div class="action-button">
                 <i class="fas fa-comment icon"></i>
                 <div class="project-comments">${project.comments}</div>
             </div>
         </div>
-        <figure class="user-component uc-small">
-            <img class="user-photo uf-small" src="./images/photo-profile.jpg" alt="">
-            <figcaption class="user-name">${project.author}</figcaption>
+        <figure class="user-button ub-small">
+            <img class="user-photo up-small" src="./images/photo-profile.jpg" alt="">
+            <figcaption class="user-name">@${project.author}</figcaption>
         </figure>
     </div>
 </div>

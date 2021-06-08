@@ -1,0 +1,13 @@
+/* MAIN */
+
+.main-container {
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1023px) {
+    .main-container {
+        flex-direction: column;
+    }    
+}

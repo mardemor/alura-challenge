@@ -1,0 +1,90 @@
+:root {
+
+    --branco: #FFFFFF;
+    --branco-escuro: #E6E6E6;
+    --branco-08: rgba(255, 255, 255, 0.08);
+    --branco-16: rgba(255, 255, 255, 0.16);
+    --branco-24: rgba(255, 255, 255, 0.24);
+    --branco-56: rgba(255, 255, 255, 0.56);
+    --branco-72: rgba(255, 255, 255, 0.72);
+    --branco-84: rgba(255, 255, 255, 0.84);
+    --cinza-claro: #A3A3A3;
+    --cinza-medio: #666666;
+    --cinza-escuro: #3D3D3D;
+    --cinza-01: rgba(196, 196, 196, 0.01);
+    --preto-08: rgba(0, 0, 0, 0.08);
+    --preto-16: rgba(0, 0, 0, 0.16);
+    --preto-24: rgba(0, 0, 0, 0.24);
+    --preto-60: rgba(0, 0, 0, 0.60);
+    --azul-claro-1: #96B9FD;
+    --azul-claro-2: #7BA4FC;
+    --azul-claro-3: #5081FB;
+    --azul-medio: #2D415B;
+    --azul-escuro: #051D3B;
+    --azul-escuro-08: rgba(80, 129, 251, 0.16);
+    --azul-escuro-16: rgba(80, 129, 251, 0.16);
+    --azul-escuro-24: rgba(80, 129, 251, 0.16);
+    --azul-escuro-64: rgba(80, 129, 251, 0.64);
+    --verde-limao: #9AFF6B;
+
+    /**/
+
+    --base-bgcolor: #051D3B;
+    --base-color: #FFFFFF;
+
+    --menu-link-color: rgba(255, 255, 255, 0.56);
+    --menu-link-color-hover: rgba(255, 255, 255, 0.72);
+    --menu-link-color-active: #FFFFFF;
+
+    --menu-icon-color:rgba(255, 255, 255, 0.56);
+    --menu-icon-color-hover:#FFFFFF;
+    --menu-icon-color-active:#FFFFFF;
+    --menu-icon-bgcolor: rgba(80, 129, 251, 0.16);
+    --menu-icon-bgcolor-hover: rgba(80, 129, 251, 0.64);
+    --menu-icon-bgcolor-active: #5081FB;
+
+    --menu-bgcolor-responsive: #2D415B;
+    --menu-border-responsive: rgba(255, 255, 255, 0.08);
+
+    --light-button-bgcolor: #5081FB;
+    --light-button-bgcolor-hover-active: #7BA4FC;
+    --light-button-bgcolor-focus: #96B9FD;
+    --light-button-color: #051D3B;
+    --light-button-border-active: #5081FB;
+
+    --dark-button-bgcolor: rgba(80, 129, 251, 0.08);
+    --dark-button-bgcolor-hover-active: rgba(80, 129, 251, 0.16);
+    --dark-button-bgcolor-focus: rgba(80, 129, 251, 0.24);
+    --dark-button-color: #FFFFFF;
+    --dark-button-color-hover: #FFFFFF;
+    --dark-button-border-active: rgba(80, 129, 251, 0.24);
+
+    --icon-button-hover: rgba(80, 129, 251, 0.08);
+    --icon-button-active: rgba(80, 129, 251, 0.16);
+
+    --user-button-hover: rgba(255, 255, 255, 0.08);
+
+    --action-button-hover: rgba(255, 255, 255, 0.08);
+    --action-button-active: rgba(255, 255, 255, 0.16);
+
+    --code-frame-bgcolor: #6BD1FF;
+    --code-frame-shadow: rgba(0, 0, 0, 0.60);
+    --code-content-bgcolor: #141414;
+    --code-content-color: #FFFFFF;
+
+    --mac-button-red: #FF5F56;
+    --mac-button-yellow: #FFBD2E;
+    --mac-button-green:#27C93F;
+
+    --form-field-bgcolor: rgba(255, 255, 255, 0.16);
+    --form-field-bgcolor-hover: rgba(255, 255, 255, 0.24);
+    --form-field-color: rgba(255, 255, 255, 0.84);
+
+    --color-picker-bgcolor: #C4C4C401;
+    --color-picker-border: #FFFFFF;
+
+    --project-card-bgcolor: rgba(0, 0, 0, 0.16);
+
+    --guide-color-card-bgcolor: #FFFFFF;
+    
+}
